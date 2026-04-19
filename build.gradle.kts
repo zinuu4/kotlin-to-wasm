@@ -5,3 +5,13 @@ plugins {
 repositories {
     mavenCentral()
 }
+
+kotlin {
+    wasmWasi {
+        binaries.executable()
+        nodejs()
+    }
+    sourceSets {
+        val wasmWasiMain by getting
+    }
+}
