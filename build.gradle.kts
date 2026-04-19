@@ -15,3 +15,9 @@ kotlin {
         val wasmWasiMain by getting
     }
 }
+
+tasks.register("runWasm") {
+    group = "application"
+    description = "Builds and runs the WASI binary"
+    dependsOn("wasmWasiNodeProductionRun")
+}
