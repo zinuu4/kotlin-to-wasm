@@ -1,11 +1,6 @@
 fun main() {
-
-    while (true) {
-
-        val line = readlnOrNull() ?: break
-
+    val inputs = listOf("hello", "world")
+    for (line in inputs) {
         println("Wasm received: $line")
-
     }
-
 }
